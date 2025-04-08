@@ -1,6 +1,20 @@
 [package]
-name = "rust_ad_query"
+name = "ad_query"
 version = "0.1.0"
 edition = "2024"
 
+
+
 [dependencies]
+tokio = { version = "1.36", features = ["full"] }
+tokio-util = { version = "0.7", features = ["codec"] }
+windows = { version = "0.48", features = [
+    "Win32_System_EventLog",
+    "Win32_Foundation",
+    "Win32_System_Diagnostics_Etw"
+]}
+futures = "0.3"
+notify = "6.0"
+
+chrono = "0.4"
+quick-xml = "0.28"
